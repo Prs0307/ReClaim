@@ -1,4 +1,4 @@
-from . import create_app
+from __init__ import create_app
 
 # Create an application instance
 app = create_app()

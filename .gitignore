@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask cache
+instance/
+*.db
+
+# SQLAlchemy migration files
+migrations/
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+.venv/
+env/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Python egg metadata
+*.egg-info/
+.eggs/
+
+# Log files
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+*.whl
+
+# Static assets (optional if you want to avoid committing compiled assets)
+static/
+# Abhinav assets (optional )
+node_modules/

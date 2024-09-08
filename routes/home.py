@@ -1,11 +1,15 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request
 home_bp = Blueprint('auth', __name__)
 
-@home_bp.route('/',methods=['GET', 'POST'])
+
+
+
+@home_bp.route('/')
 def index():
     return render_template('home.html')
 
-@home_bp.route('/predict', methods=['POST'])
+
+@home_bp.route('/home', methods=['POST'])
 def predict():
     if request.method == 'POST':
         # Capture the form data
@@ -14,6 +18,15 @@ def predict():
         brand = request.form['brand']
         model = request.form['model']
         condition = request.form['condition']
-        return render_template('home/result.html', price="predicted_price")
-    
-    return redirect(url_for('home.index'))
+        # Perform your prediction logic here
+        # Replace "predicted_price" with the actual predicted price
+        predicted_price = calculate_price(category, device_type, brand, model, condition)
+
+        return render_template('result.html', price=predicted_price)
+    return redirect(url_for('home.html'))
+
+def calculate_price(category, device_type, brand, model, condition):
+ 
+    predicted_price = 1000  # Placeholder value
+
+    return predicted_price

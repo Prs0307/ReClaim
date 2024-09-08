@@ -9,7 +9,7 @@ def index():
     return render_template('home.html')
 
 
-@home_bp.route('/home', methods=['POST'])
+@home_bp.route('/result', methods=['POST'])
 def predict():
     if request.method == 'POST':
         # Capture the form data
@@ -18,6 +18,7 @@ def predict():
         brand = request.form['brand']
         model = request.form['model']
         condition = request.form['condition']
+        print(category, device_type,brand, model, condition)
         # Perform your prediction logic here
         # Replace "predicted_price" with the actual predicted price
         predicted_price = calculate_price(category, device_type, brand, model, condition)

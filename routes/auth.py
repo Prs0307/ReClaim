@@ -16,8 +16,6 @@ def login():
             print('Invalid credentials, try again.')
     
     return render_template('auth/login.html')
-
-# Route for signup page
 @auth_bp.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
